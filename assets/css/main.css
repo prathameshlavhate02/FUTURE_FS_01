@@ -1050,83 +1050,107 @@ section,
 /*--------------------------------------------------------------
 # Experience Section
 --------------------------------------------------------------*/
-/* === Experience Timeline Professional Style === */
+/* === Experience Timeline: Sleek Card Style === */
 .experience .timeline {
   position: relative;
   margin: 0;
   padding-left: 40px;
-  border-left: 3px solid #007bff;
+  border-left: 3px solid var(--primary-color, #007bff);
 }
 
 .experience .timeline-item {
   position: relative;
-  margin-bottom: 40px;
-  padding-left: 20px;
+  margin-bottom: 60px;
+  padding-left: 30px;
 }
 
 .experience .timeline-marker {
   position: absolute;
-  top: 6px;
-  left: -8px;
-  width: 16px;
-  height: 16px;
-  background-color: #007bff;
-  border: 3px solid #fff;
+  top: 10px;
+  left: -12px;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  border: 4px solid #fff;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.2);
-  z-index: 1;
+  box-shadow: 0 0 0 5px rgba(0, 123, 255, 0.2);
+  z-index: 2;
 }
 
 .experience .timeline-content {
-  background: #f9f9f9;
-  padding: 20px 25px;
-  border-radius: 10px;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 24px 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.experience .timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
 }
 
 .experience .timeline-content h4 {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 21px;
+  font-weight: 700;
   margin-bottom: 6px;
-  color: #333;
+  color: #111;
 }
 
 .experience .timeline-content h5 {
-  font-size: 15px;
+  font-size: 16px;
   color: #555;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .experience .timeline-date {
   font-size: 13px;
-  font-weight: 500;
-  color: #007bff;
-  margin-bottom: 12px;
+  font-weight: 600;
+  color: var(--primary-color, #007bff);
+  margin-bottom: 14px;
   display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .experience .timeline-content p {
   font-size: 15px;
-  color: #444;
+  color: #333;
+  line-height: 1.7;
   margin: 0;
-  line-height: 1.6;
 }
 
-/* Responsive Adjustment */
-@media (max-width: 576px) {
+/* Responsive */
+@media (max-width: 768px) {
   .experience .timeline {
     padding-left: 20px;
   }
 
   .experience .timeline-marker {
-    width: 12px;
-    height: 12px;
-    left: -6px;
+    width: 14px;
+    height: 14px;
+    left: -8px;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.15);
   }
 
   .experience .timeline-content {
-    padding: 15px 20px;
+    padding: 18px 22px;
+    border-radius: 12px;
+  }
+
+  .experience .timeline-content h4 {
+    font-size: 18px;
+  }
+
+  .experience .timeline-content h5 {
+    font-size: 15px;
+  }
+
+  .experience .timeline-content p {
+    font-size: 14px;
   }
 }
 
