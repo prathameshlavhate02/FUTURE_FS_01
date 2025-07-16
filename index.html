@@ -43,6 +43,18 @@
   <div class="custom-cursor"></div>
 
 
+<!-- Splash Screen -->
+<div id="splash-screen">
+  <div class="moving-text">Prathamesh Portfolio</div>
+</div>
+
+<!-- Your Main Website -->
+<div id="main-site" style="display: none;">
+  <!-- keep your full portfolio HTML code here -->
+</div>
+
+
+
 
   <header id="header" class="header d-flex flex-column justify-content-center">
 
@@ -610,6 +622,15 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+<script>
+  // After 3 seconds, hide splash screen and show main website
+  setTimeout(() => {
+    document.getElementById('splash-screen').style.display = 'none';
+    document.getElementById('main-site').style.display = 'block';
+  }, 3000);
+</script>
 
 </body>
 <script>
